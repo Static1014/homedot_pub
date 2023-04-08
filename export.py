@@ -169,21 +169,22 @@ IS_UGLY_JS = True
 DIR_INTERVAL = os.sep
 
 
-outPathMac = '/Users/xiongjian/Downloads/etax'
-outPathPC = 'D:\\ws_web\\etax-auto-export'
+outPathMac = '/Users/xiongjian/Documents/homedot.space/homedot_site/out'
+outPathPC = 'D:\\ws_web\\auto-export'
 
 outPath = outPathPC if IS_PC else outPathMac
 print('输出路径：' + outPath)
 
 # 指定忽略的文件/目录
 ignoreArr = [
-    '.svn',
+    'out',
+    '.git',
+    '.gitignore',
     '.idea',
     '.sass-cache',
     '.DS_Store',
     'export.py',
-    '注意事项',
-    'jquery-3.6.0.min.js',
+    'README.md',
 ]
 # 指定忽略的文件后缀
 ignoreSuffixes = [
@@ -198,28 +199,20 @@ ignoreDirs = [
 ]
 # 指定要导出的app_pages下的功能
 targetPages = [
-    'fpjs',
-    'common',
-    'hlzd',
-    'error',
-    'hcp',
-    '_test',
-    'help',
-    # 'download',
 ]
 
 # 指定要进行转jsp的文件后缀
 html2JspFileSuffix = [
-    '.html',
+#     '.html',
 ]
 
 # 指定不转jsp的文件
 noHtml2JspFileSuffix = [
-    '404.html',
-    '500.html',
-    '502.html',
-    'ysypj.html',
-    'test.html',
+#     '404.html',
+#     '500.html',
+#     '502.html',
+#     'ysypj.html',
+#     'test.html',
 ]
 
 # 指定要进行代码编辑的文件后缀
