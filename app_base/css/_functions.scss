@@ -1,0 +1,9 @@
+@import "variable";
+
+@function px2rem($px) {
+  @return #{$px/$font-size-base}rem;
+}
+
+@function getFullPath($filePath) {
+  @return "#{if($is-local-html, "../..", "/" + $project_name) + $filePath}"
+}
