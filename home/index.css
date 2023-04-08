@@ -1,0 +1,45 @@
+@keyframes collapseAnim {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 0; } }
+@-webkit-keyframes collapseAnim {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 0; } }
+@keyframes circle {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+html body {
+  box-sizing: border-box;
+  background: #f2f2f2; }
+  html body .container {
+    padding: 20px;
+    display: flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: top;
+    -webkit-justify-content: top;
+    align-items: center;
+    -webkit-align-items: center; }
+    html body .container p {
+      margin-top: 12px;
+      line-height: 1.4; }
+
+/*# sourceMappingURL=index.css.map */

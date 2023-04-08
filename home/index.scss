@@ -1,0 +1,18 @@
+@import "../app_base/css/mixin";
+
+html {
+  body {
+    box-sizing: border-box;
+    background: $color-bg;
+
+    .container {
+      padding: 20px;
+      @include flex(column, top);
+
+      p {
+        margin-top: 12px;
+        line-height: 1.4;
+      }
+    }
+  }
+}
