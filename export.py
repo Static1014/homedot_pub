@@ -189,7 +189,7 @@ ignoreArr = [
 # 指定忽略的文件后缀
 ignoreSuffixes = [
     '.scss',
-    '.css.map'
+#     '.css.map'
 ]
 # 指定忽略的目录
 ignoreDirs = [

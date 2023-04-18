@@ -6,12 +6,45 @@ html {
     background: $color-bg;
 
     .container {
-      padding: 20px;
-      @include flex(column, top);
+      @include flex(column);
 
-      p {
-        margin-top: 12px;
-        line-height: 1.4;
+      .content {
+        box-sizing: border-box;
+        @include flex(column, top);
+        padding: 10px 20px;
+
+        section {
+          background: none;
+
+          h1, p {
+            margin-top: 8px;
+            line-height: 1.4;
+          }
+
+          &#ch {
+            @include flex(column, top);
+          }
+
+          &#en {
+          }
+
+          &#jp {
+          }
+        }
+      }
+
+      .footer {
+        min-height: 30px;
+        background: $color-bg;
+        color: $font-color-normal;
+        font-size: $font-size-small;
+        padding: 8px 0;
+
+        .author {
+          color: $font-color-normal;
+          line-height: 1.4;
+          text-align: center;
+        }
       }
     }
   }
