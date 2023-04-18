@@ -280,7 +280,7 @@ function toast(txt, bgColor, fontColor, delayTime) {
       delayTime = 1500;
     }
     let inAnim = isTop ? {top: 16, opacity: 1} : {bottom: "5%", opacity: 1}
-    let outAnim = isTop ? {top: -100, opacity: 1} : {bottom: -100, opacity: 0}
+    let outAnim = isTop ? {top: -100, opacity: 0} : {bottom: -100, opacity: 0}
 
     toast.stop().animate(inAnim).delay(delayTime).animate(outAnim);
   }

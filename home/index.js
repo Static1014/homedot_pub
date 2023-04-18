@@ -56,8 +56,7 @@ $(function () {
         "心は共に　君と共に",
       footer: {
         // author: "主办单位：熊健&emsp;&emsp;地址：天津市西青区张家窝镇琴韵道尚林苑19号楼1门404号&emsp;&emsp;<br>邮编：300380"
-        author: "主办单位：熊健&emsp;&emsp;邮箱：<a href='mailto:420048248@qq.com'>420048248@qq.com</a>&emsp;&emsp;邮编：300380<br><a href='https://beian.miit.gov.cn'>津ICP备2023002266号-1</a>"
-        // author: "主办单位：熊健&emsp;邮编：300380"
+        author: "主办单位：熊健&emsp;&emsp;邮箱：<a href='mailto:420048248@qq.com'>420048248@qq.com</a><br><a href='https://beian.miit.gov.cn'>津ICP备2023002266号-1</a>"
       }
     },
     computed: {},

@@ -3,6 +3,7 @@
 @import "functions";
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   //@include disable_select;
@@ -25,8 +26,8 @@ html {
     font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 
     .container {
-      width: 100%;
-      height: 100%;
+      //width: 100%;
+      //height: 100%;
       position: relative;
 
       .header {
