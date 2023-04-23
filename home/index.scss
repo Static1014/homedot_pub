@@ -40,9 +40,26 @@ html {
         padding: 8px;
 
         .author {
+          @include flex(row, center, center);
           color: $font-color-normal;
           line-height: 1.4;
           text-align: center;
+          flex-wrap: wrap;
+
+          * {
+            @include flex-shrink(0);
+          }
+
+          @media screen and (max-width: 600px) {
+            span {
+              width: 100%;
+            }
+          }
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
         }
       }
     }
