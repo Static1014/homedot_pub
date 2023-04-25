@@ -89,9 +89,23 @@ html body {
         line-height: 1.4;
         text-align: center;
         flex-wrap: wrap; }
+        html body .container .footer .author a:link, html body .container .footer .author a:visited, html body .container .footer .author a:hover, html body .container .footer .author a:active {
+          color: #666666; }
         html body .container .footer .author * {
           flex-shrink: 0;
           -webkit-flex-shrink: 0; }
+        html body .container .footer .author #ga {
+          display: flex;
+          display: -webkit-flex;
+          display: -o-flex;
+          display: -ms-flex;
+          flex-direction: row;
+          -ms-flex-direction: row;
+          -webkit-flex-direction: row;
+          justify-content: space-between;
+          -webkit-justify-content: space-between;
+          align-items: center;
+          -webkit-align-items: center; }
         @media screen and (max-width: 600px) {
           html body .container .footer .author span {
             width: 100%; } }

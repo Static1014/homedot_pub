@@ -46,8 +46,18 @@ html {
           text-align: center;
           flex-wrap: wrap;
 
+          a {
+            &:link, &:visited, &:hover, &:active {
+              color: $font-color-normal;
+            }
+          }
+
           * {
             @include flex-shrink(0);
+          }
+
+          #ga {
+            @include flex;
           }
 
           @media screen and (max-width: 600px) {
