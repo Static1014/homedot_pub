@@ -38,22 +38,22 @@ $(function () {
         "Yearning for a future reunion.<br>" +
         "But for now, we are like red beans<br>" +
         "Growing on separate branches.",
-      poem_jp: "相思<br>" +
-        "<br>" +
-        "遠い山と川　白い雲と霧<br>" +
-        "春の風に舞う　花の香り<br>" +
-        "別れた日に　胸に秘めて<br>" +
-        "君を思いながら　月夜を仰ぐ<br>" +
-        "<br>" +
-        "遠い日に　別れの涙<br>" +
-        "夢に君を　願い続け<br>" +
-        "逢いたい願い　積み重ねて<br>" +
-        "胸に抱く　相思の情<br>" +
-        "<br>" +
-        "果てしない山と川　広がる空<br>" +
-        "君の声　君の笑顔<br>" +
-        "時を超えて　遠くへと<br>" +
-        "心は共に　君と共に",
+      // poem_jp: "相思<br>" +
+      //   "<br>" +
+      //   "遠い山と川　白い雲と霧<br>" +
+      //   "春の風に舞う　花の香り<br>" +
+      //   "別れた日に　胸に秘めて<br>" +
+      //   "君を思いながら　月夜を仰ぐ<br>" +
+      //   "<br>" +
+      //   "遠い日に　別れの涙<br>" +
+      //   "夢に君を　願い続け<br>" +
+      //   "逢いたい願い　積み重ねて<br>" +
+      //   "胸に抱く　相思の情<br>" +
+      //   "<br>" +
+      //   "果てしない山と川　広がる空<br>" +
+      //   "君の声　君の笑顔<br>" +
+      //   "時を超えて　遠くへと<br>" +
+      //   "心は共に　君と共に",
       footer: {
         author: "<span>主办单位：熊健&emsp;邮箱：<a href='mailto:420048248@qq.com'>420048248@qq.com</a></span>" +
           "&emsp;<a id='ga' href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011102001541' target='_blank'><img src='../app_base/assets/img/ic_beian.png' alt='备案'/>津公网安备 12011102001541号</a>" +
