@@ -1,11 +1,17 @@
 @import "../../../css/mixin";
 
+$height-tab-small: 32px;
+
 .tab-layout {
   @include flex(row, start, center);
   height: $height-tab;
   background: $color-white;
   overflow-x: scroll;
   overflow-y: hidden;
+
+  &.small {
+    height: $height-tab-small;
+  }
 
   // 隐藏滚动条
   &::-webkit-scrollbar {
@@ -23,6 +29,11 @@
 
     font-size: $font-size-btn;
     color: $font-color-normal;
+
+    &.small {
+      line-height: $height-tab-small;
+      padding: 0 6px;
+    }
 
     &.selected {
       color: $font-color-dark;

@@ -23,7 +23,6 @@
   100% {
     transform: rotate(360deg); } }
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   word-break: break-all;
@@ -39,6 +38,8 @@ html body {
   background: #f2f2f2;
   font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif; }
   html body .container {
+    width: 100%;
+    height: 100%;
     position: relative; }
     html body .container .header {
       display: flex;
@@ -312,6 +313,60 @@ html body {
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
+  html body #log_view {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 9998;
+    background: #f2f2f2;
+    display: flex;
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: start;
+    -webkit-justify-content: flex-start;
+    align-items: start;
+    -webkit-align-items: flex-start; }
+    html body #log_view .log-actions {
+      width: 100%;
+      padding: 4px 8px;
+      display: flex;
+      display: -webkit-flex;
+      display: -o-flex;
+      display: -ms-flex;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-flex-direction: row;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      align-items: center;
+      -webkit-align-items: center; }
+      html body #log_view .log-actions .log-title {
+        color: #333333;
+        font-weight: bold;
+        font-size: 16px; }
+    html body #log_view #log_content {
+      overflow-y: scroll;
+      padding: 8px 2px 20px; }
+      html body #log_view #log_content .log-item {
+        font-size: 10px;
+        line-height: 1.2;
+        padding: 2px;
+        border-bottom: 1px solid #d5d5d5; }
+        html body #log_view #log_content .log-item.e {
+          color: #de6161; }
+        html body #log_view #log_content .log-item.i {
+          color: #4ec87c; }
+        html body #log_view #log_content .log-item.w {
+          color: #efb400; }
+        html body #log_view #log_content .log-item.crash {
+          color: #dd8352;
+          font-style: italic; }
   html body #g-pb {
     position: fixed;
     width: 100%;
@@ -453,6 +508,8 @@ html body {
           padding: 0 2px;
           min-width: 0;
           cursor: pointer; }
+  html body .dialog-init {
+    display: none; }
   html body .tip {
     padding: 4px 0;
     color: #f65f5d;
@@ -577,8 +634,12 @@ html body {
       font-size: 14px;
       line-height: 1.2;
       color: #666666; }
+  html body .color-normal {
+    color: #666666 !important; }
   html body .color-error, html body .color-red {
-    color: #f65f5d !important; }
+    color: #de6161 !important; }
+  html body .color-info, html body .color-green {
+    color: #4ec87c !important; }
   html body .color-help, html body .color-orange {
     color: #dd8352 !important; }
   html body .indent {
@@ -618,6 +679,10 @@ html body {
     min-width: 0 !important; }
   html body .dash-line {
     border-bottom: 1px dashed #e2e2e2; }
+  html body .line {
+    height: 0.5px;
+    width: 100%;
+    background: #d5d5d5; }
   html body .slide-enter-active, html body .slide-leave-active {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;

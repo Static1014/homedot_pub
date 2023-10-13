@@ -53,8 +53,8 @@
 }
 
 // 安卓样式转圈
-@mixin loadingAndroid($color: $color-white) {
-  border: 2px solid $color;
+@mixin loadingAndroid($color: $color-white, $border-width: 2px) {
+  border: $border-width solid $color;
   border-right-color: transparent;
   border-radius: 50%;
   @include anim(circle 1s infinite linear)

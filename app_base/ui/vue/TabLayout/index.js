@@ -13,10 +13,14 @@ let TabLayout = {
   },
   props: {
     curTab: {type: Number, default: 0},
+    size: {type: String, default: ''},
     tabs: {type: Array, default: () => [], required: true},
   },
   emits: ['before-change', 'after-change'],
   computed: {
+    isSmall() {
+      return this.size === 'small'
+    },
     selectedTab() {
       let index
       if (this.curTab < 0) {
@@ -53,8 +57,8 @@ let TabLayout = {
     }
   },
   template: `
-        <div class="tab-layout">
-        <div :class="['tab-item', index === selectedTab ? 'selected' : '']" v-for="(tab, index) in tabs" :key="index" @click="clickTab(index)">
+        <div :class="['tab-layout', isSmall?'small':'']">
+        <div :class="['tab-item', index === selectedTab ? 'selected' : '', isSmall?'small':'']" v-for="(tab, index) in tabs" :key="index" @click="clickTab(index)">
           {{ tab.name }}
           <span class="tab-count" v-show="tab.count && tab.count>0">{{ tab.count }}</span>
         </div>

@@ -53,13 +53,87 @@ function lenNum(number, len = 2) {
   return result
 }
 
+let myLogView = false
+
+/**
+ * 添加日志视图，模拟控制台
+ */
+function initLogView() {
+  myLogView = true
+  addFloatBtn(showLogView, '../../app_base/assets/img/menu.png')
+
+  let lv = $('#log_view')
+  if (lv.length < 1) {
+    lv = $("<div id='log_view'>" +
+      "<div class='log-actions'>" +
+      "<div id='log_close' class='btn'>隐藏</div>" +
+      "<div class='log-title'>模拟控制台</div>" +
+      "<div id='log_clear' class='btn bg-red'>清空</div>" +
+      "</div>" +
+      "<div class='line'></div>" +
+      "<div id='log_content'></div>" +
+      "</div>")
+    $('body').append(lv)
+    $('#log_close').on('click', () => {
+      lv.hide()
+    })
+    $('#log_clear').on('click', () => {
+      clearLog()
+    })
+    lv.hide()
+  }
+}
+
+/**
+ * 清空模拟控制台
+ */
+function clearLog() {
+  if (myLogView) {
+    $('#log_content').empty();
+  }
+}
+
+/**
+ * 添加日志到模拟控制台
+ * @param log 内容
+ * @param level 日志等级（e: error， i：info， w：warning，crash：exception）
+ */
+function addLog(log, level) { 
+  if (myLogView) {
+    let logItem = $('<div class="log-item ' + level + '"></div>')
+    logItem.text(log)
+    let c = $('#log_content')
+    c.append(logItem)
+
+
+    let lv = $('#log_view')
+    if (lv.is(':visible')) {
+      c.scrollTop(c.prop('scrollHeight'))
+    }
+  }
+}
+
+function showLogView() {
+  if (myLogView) {
+    let lv = $('#log_view')
+    if (lv.length > 0) {
+      lv.show()
+      let c = $('#log_content')
+      c.scrollTop(c.prop('scrollHeight'))
+    }
+  }
+}
+
 /**
  * 打印崩溃信息
  */
 function logCrash(error) {
   if (log) {
-    let tag = "Crash";
-    console.error(formatTime() + " : " + tag + "  ===>  ");
+    let tag = "Crash"
+    let pre = formatTime() + " : " + tag + "  ===>  "
+    addLog(pre, 'crash')
+    addLog(error, 'crash')
+    console.error(pre)
     console.error(error)
   }
 }
@@ -74,7 +148,9 @@ function logE(msg, tag) {
     if (!tag) {
       tag = "";
     }
-    console.error(formatTime() + " : " + tag + "  ===>  " + JSON.stringify(msg));
+    let m = formatTime() + " : " + tag + "  ===>  " + JSON.stringify(msg)
+    addLog(m, 'e')
+    console.error(m)
   }
 }
 
@@ -88,7 +164,9 @@ function logI(msg, tag) {
     if (!tag) {
       tag = "";
     }
-    console.info(formatTime() + " : " + tag + "  ===>  " + JSON.stringify(msg));
+    let m = formatTime() + " : " + tag + "  ===>  " + JSON.stringify(msg)
+    addLog(m, 'i')
+    console.info(m);
   }
 }
 
@@ -102,7 +180,9 @@ function logW(msg, tag) {
     if (!tag) {
       tag = "";
     }
-    console.warn(formatTime() + " : " + tag + "  ===>  " + JSON.stringify(msg));
+    let m = formatTime() + " : " + tag + "  ===>  " + JSON.stringify(msg)
+    addLog(m, 'w')
+    console.warn(m);
   }
 }
 
@@ -438,7 +518,7 @@ let isScrollHorizontal
  * 显示弹框
  * @param jqContent JQ元素
  * @param dialogId 如果给dialog指定了id，则不会被后调用的showDialog重写，如果指定id的dialog已经创建过，将会将其显示并重新绘如新的content
- * @param rootId dialog实际依附的视图。比如想在vue对象包裹的视图中弹框(弹框内容还想使用同一个vue对象控制)，可将vue绑定的id或vue绑定视图内的某个id传入;使用方法参见_text/index.html
+ * @param rootId dialog实际依附的视图。比如想在vue对象包裹的视图中弹框(弹框内容还想使用同一个vue对象控制)，可将vue绑定的id或vue绑定视图内的某个id传入;使用方法参见_test/index.html
  * @param clickGroundToClose 是否支持点击透明背景关闭弹框；如果传递的是function，可在关闭时回调
  * @param isScrollHorizontalInPage 如果页面可以横向滚动，请设置为true
  */
@@ -1021,21 +1101,30 @@ function enableBodyScroll(jqTarget) {
 }
 
 /**
- * 按照数据类型格式化数据
+ * 返回的事格式化后的字符串
+ * @param value
+ * @returns {string|string|*}
+ */
+function parseFloat2(value) {
+  return parseValue(value, 2)
+}
+
+/**
+ * 按照数据类型格式化数据的字符串
  * @param value
  * @param dc 小数位数
  */
 function parseValue(value, dc) {
-  logI(value + "  -  " + dc)
+  // logI(value + "  -  " + dc)
   if (typeof dc == "number") {
     const f = parseInt(dc);
-    if (value == undefined || value == "" || isNaN(value) || !isFinite(value)) {
+    if (value === undefined || value === "" || isNaN(value) || !isFinite(value)) {
       value = 0;
     }
     var dividend = Math.pow(10, f);
     value = Math.round(value * dividend) / dividend;
     var result = value.toString();
-    if (f == 0) {
+    if (f === 0) {
       return result
     }
     if (result.indexOf(".") < 0) {
@@ -1046,13 +1135,13 @@ function parseValue(value, dc) {
     }
     return result;
   } else {
-    if (value == undefined || value == "") {
-      return "";
+    if (value === undefined || value === "" || value === null) {
+      return "0.00";
     } else {
       return value;
     }
   }
-};
+}
 
 /**
  * 数据对象深层克隆

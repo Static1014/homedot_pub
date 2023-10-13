@@ -3,7 +3,6 @@
 @import "functions";
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   //@include disable_select;
@@ -26,8 +25,8 @@ html {
     font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
 
     .container {
-      //width: 100%;
-      //height: 100%;
+      width: 100%;
+      height: 100%;
       position: relative;
 
       .header {
@@ -356,6 +355,60 @@ html {
       }
     }
 
+    // 全局logView，手机上模拟console
+    #log_view {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      z-index: $z-index-log;
+      background: $color-bg;
+
+      @include flex(column, start, start);
+
+      .log-actions {
+        width: 100%;
+        padding: 4px 8px;
+        @include flex(row);
+
+        .log-title {
+          color: $font-color-dark;
+          font-weight: bold;
+          font-size: $font-size-large;
+        }
+      }
+
+      #log_content {
+        overflow-y: scroll;
+        padding: 8px 2px 20px;
+
+        .log-item {
+          font-size: 10px;
+          line-height: 1.2;
+          padding: 2px;
+          border-bottom: line($color-border, 1px, solid);
+
+          &.e {
+            color: $color-red;
+          }
+
+          &.i {
+            color: $color-green;
+          }
+
+          &.w {
+            color: $color-yellow;
+          }
+
+          &.crash {
+            color: $color-orange;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
     // 全局“加载中”样式
     #g-pb {
       position: fixed;
@@ -493,6 +546,10 @@ html {
       }
     }
 
+    .dialog-init {
+      display: none;
+    }
+
     .tip {
       padding: 4px 0;
       color: $color-error;
@@ -623,8 +680,16 @@ html {
     }
 
     // 字体红色
+    .color-normal {
+      color: $font-color-normal !important;
+    }
+
     .color-error, .color-red {
-      color: $color-error !important;
+      color: $color-red !important;
+    }
+
+    .color-info, .color-green {
+      color: $color-green !important;
     }
 
     .color-help, .color-orange {
@@ -701,6 +766,12 @@ html {
 
     .dash-line {
       border-bottom: 1px dashed $color-divider-line;
+    }
+
+    .line {
+      height: 0.5px;
+      width: 100%;
+      background: $color-border;
     }
 
     // vue slide动画
