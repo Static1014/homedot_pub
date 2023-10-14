@@ -1,70 +1,89 @@
 @import "../app_base/css/mixin";
 
+$cc1: #4BBCF4;
+$cc2: #61C0BF;
+$cc3: #BBDED6;
+$cc4: #FFB6B9;
+$cc5: #fae3d9;
+$cc6: #c7bde3;
+
 html {
+  background: linear-gradient($cc2, $cc3) fixed;
+
   body {
-    background: $color-bg;
+    overflow: hidden;
+    background: none;
 
     .container {
-      height: 100%;
-      @include flex(column);
+      background: none;
+      width: 100%;
+      display: block;
 
       .content {
-        background: $color-bg;
-        @include flex(column, top);
-        padding: 8px;
-        @include flex-grow(1);
-        overflow-y: scroll;
+        background: none;
 
         section {
-          background: none;
+          text-align: center;
 
-          h1, p {
-            margin-top: 8px;
-            line-height: 1.4;
+          #logo {
+            width: 60px;
+          }
+
+          &#top {
+
+            h1 {
+              color: $font-color-white;
+              text-align: center;
+            }
+          }
+
+          &#box-intro {
+            width: 100%;
+            overflow-x: scroll;
+
+            .intro {
+              @include flex;
+
+              img {
+                object-fit: contain;
+                width: 300px;
+                margin: 0 10px;
+              }
+            }
+          }
+
+          &#download {
+            h3{
+              color: $font-color-white;
+            }
+
+            .btn_download {
+              @include flex(row, start, center);
+              color: $font-color-normal;
+              @include border-radius;
+              text-align: end;
+              border: none;
+              cursor: pointer;
+              min-height: $btn-height;
+              padding: 4px 8px;
+              min-width: $btn-min-width;
+              background-color: $color-white !important;
+              margin-bottom: 12px;
+
+              .logo {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+              }
+            }
           }
         }
       }
 
       .footer {
-        @include flex-shrink(0);
-        min-height: 30px;
-        background: $color-bg;
-        color: $font-color-normal;
-        font-size: $font-size-small;
-        padding: 4px;
-
-        .author {
-          @include flex(row, center, center);
-          color: $font-color-normal;
-          line-height: 1.4;
-          text-align: center;
-          flex-wrap: wrap;
-
-          a {
-            &:link, &:visited, &:hover, &:active {
-              color: $font-color-normal;
-            }
-          }
-
-          * {
-            @include flex-shrink(0);
-          }
-
-          #ga {
-            @include flex;
-          }
-
-          @media screen and (max-width: 600px) {
-            span {
-              width: 100%;
-            }
-          }
-
-          img {
-            width: 16px;
-            height: 16px;
-          }
-        }
+        background: none;
+        color: $font-color-unable;
+        font-size: 12px;
       }
     }
   }

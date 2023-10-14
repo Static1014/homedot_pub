@@ -7,6 +7,7 @@
   margin: 0;
   //@include disable_select;
   word-break: break-all;
+  box-sizing: border-box;
   // 去除点击按下效果
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
@@ -263,7 +264,7 @@ html {
       color: $font-color-white;
       font-size: $font-size-btn;
       text-align: center;
-      height: $btn-height;
+      min-height: $btn-height;
       line-height: $btn-height;
       padding: 0 8px;
       min-width: $btn-min-width;
