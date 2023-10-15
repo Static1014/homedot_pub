@@ -5,7 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homedot</title>
-  <link rel="shortcut icon" href="../app_base/assets/img/favicon.ico">
+  <script type="text/javascript" src="../config/config.js"></script>
+  <link rel="shortcut icon" href="../app_base/assets/img/homedot.ico">
   <link rel="stylesheet" href="../app_base/css/reset.css">
   <link rel="stylesheet" href="../app_base/css/style.css">
   <link rel="stylesheet" href="index.css">
@@ -33,7 +34,7 @@
     <!--</section>-->
   </div>
   <div class="footer">
-    <div class="author" v-html="footer.author"></div>
+    <div class="author" v-html="getFooterHtml(config.homedot)"></div>
   </div>
 </div>
 <script type="text/javascript" src="index.js"></script>

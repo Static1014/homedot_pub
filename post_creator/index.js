@@ -10,14 +10,28 @@ $(function () {
     components: {},
     data: {
       store: {
-        // todo 下载地址
-        hw: '',
-        bd: '',
-        gp: '',
+        hw: {
+          visible: false, // 是否显示
+          ok: false, // 是否审核通过
+          url: '' // 下载地址
+        },
+        bd: {
+          visible: false,
+          ok: false,
+          url: ''
+        },
+        gp: {
+          visible: false,
+          ok: false,
+          url: ''
+        },
       },
       isEn: false,
     },
     computed: {
+      dlVisible() {
+        return this.store.hw.visible || this.store.bd.visible || this.store.gp.visible
+      },
       name() {
         return this.isEn ? 'Post Creator' : '图创'
       },
