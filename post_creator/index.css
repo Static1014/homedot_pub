@@ -42,6 +42,7 @@ html {
             text-align: center; }
           html body .container .content section#box-intro {
             width: 100%;
+            padding: 0;
             overflow-x: scroll; }
             html body .container .content section#box-intro .intro {
               display: flex;
@@ -58,7 +59,7 @@ html {
               html body .container .content section#box-intro .intro img {
                 object-fit: contain;
                 width: 300px;
-                margin: 0 10px; }
+                margin-right: 10px; }
           html body .container .content section#download h3 {
             color: #ffffff; }
           html body .container .content section#download .btn_download {
