@@ -35,6 +35,27 @@ html {
               color: $font-color-white;
               text-align: center;
             }
+
+            .lang {
+              color: $font-color-sub;
+              cursor: pointer;
+              padding: 10px 0 6px;
+
+              .zh, .en {
+                font-size: $font-size-small;
+
+                &.selected {
+                  color: $color-red;
+                  font-weight: bold;
+                }
+              }
+            }
+
+            .policy {
+              color: $cc5;
+              padding: 10px 0 4px;
+              cursor: pointer;
+            }
           }
 
           &#box-intro {
@@ -54,7 +75,7 @@ html {
           }
 
           &#download {
-            h3{
+            h3 {
               color: $font-color-white;
             }
 
@@ -85,6 +106,7 @@ html {
         background: none;
         color: $font-color-unable;
         font-size: 12px;
+        margin-top: 30px;
       }
     }
   }

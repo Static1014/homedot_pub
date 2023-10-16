@@ -25,9 +25,13 @@ function getFooterHtml(project, isEn = false) {
   let author = isEn ? 'Owner' : '主办单位'
   let email = isEn ? 'Email' : '邮箱'
   return "<span>" +
-    author + "：" + config.author + "&emsp;" +
+    author + "：" + getAuthor(isEn) + "&emsp;" +
     email + "：<a href='mailto:" + config.email + "'>" + config.email + "</a>" +
     "</span>" +
     "&emsp;<a id='ga' href='" + config.policeUrl + project.policeNo + "' target='_blank'><img src='../app_base/assets/img/ic_beian.png' alt='备案'/>" + config.policeRecordPrefix + project.policeNo + "号</a>" +
     "&emsp;<a href='https://beian.miit.gov.cn' target='_blank'>" + project.icpNo + "</a>"
+}
+
+function getAuthor(isEn = false) {
+  return isEn ? config.authorEn : config.author
 }

@@ -59,6 +59,12 @@ $(function () {
             // 华为
             break
         }
+      },
+      clickLang() {
+        this.isEn = !this.isEn
+      },
+      clickPolicy(){
+        window.open('./privacy/index.html', '_blank')
       }
     },
     mounted() {
