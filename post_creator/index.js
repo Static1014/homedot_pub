@@ -63,8 +63,8 @@ $(function () {
       clickLang() {
         this.isEn = !this.isEn
       },
-      clickPolicy(){
-        window.open('./privacy/index.html', '_blank')
+      clickPolicy() {
+        window.open('./privacy/index.html?lang=' + (this.isEn ? 'en' : 'zh'), '_blank')
       }
     },
     mounted() {
