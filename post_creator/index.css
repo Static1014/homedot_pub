@@ -98,6 +98,9 @@ html {
             min-width: 90px;
             background-color: #ffffff !important;
             margin-bottom: 12px; }
+            html body .container .content section#download .btn_download.checking {
+              background-color: #e2e2e2 !important;
+              color: #999999; }
             html body .container .content section#download .btn_download .logo {
               width: 24px;
               height: 24px;

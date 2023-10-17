@@ -18,20 +18,25 @@ $(function () {
         },
         bd: {
           visible: false,
-          ok: false,
-          url: ''
+          ok: true,
+          url: 'https://pan.baidu.com/s/1ngEfS0UHKfOGbzMIjxeWgw?pwd=d8aq'
         },
         gp: {
           visible: false,
           ok: false,
           url: ''
         },
+        server: {
+          visible: false,
+          ok: true,
+          url: './apk/pc_1.0.0(1)_23.10.17.apk'
+        }
       },
       isEn: false,
     },
     computed: {
       dlVisible() {
-        return this.store.hw.visible || this.store.bd.visible || this.store.gp.visible
+        return this.store.hw.visible || this.store.bd.visible || this.store.gp.visible || this.store.server.visible
       },
       name() {
         return this.isEn ? 'Post Creator' : '图创'
@@ -52,20 +57,30 @@ $(function () {
         switch (index) {
           case 0:
             // google play
+            this.openLink(this.store.gp.url)
             break
           case 1:
             // 百度网盘
+            this.openLink(this.store.bd.url)
             break
           case 2:
             // 华为
+            this.openLink(this.store.hw.url)
+            break
+          case 3:
+            // 华为
+            this.openLink(this.store.server.url)
             break
         }
+      },
+      openLink(url) {
+        window.open(url, '_blank')
       },
       clickLang() {
         this.isEn = !this.isEn
       },
       clickPolicy() {
-        window.open('./privacy/index.html?lang=' + (this.isEn ? 'en' : 'zh'), '_blank')
+        this.openLink('./privacy/index.html?lang=' + (this.isEn ? 'en' : 'zh'))
       }
     },
     mounted() {

@@ -92,6 +92,12 @@ html {
               background-color: $color-white !important;
               margin-bottom: 12px;
 
+              &.checking {
+                //  审核中
+                background-color: $color-unable !important;
+                color: $font-color-sub;
+              }
+
               .logo {
                 width: 24px;
                 height: 24px;
