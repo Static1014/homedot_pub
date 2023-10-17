@@ -9,18 +9,17 @@ $cc6: #c7bde3;
 
 html {
   body {
-    overflow: hidden;
-    background: none;
-
     .container {
       .content {
         padding: 12px;
 
         h2 {
           padding: 15px 0;
+          text-align: center;
         }
 
         .lang {
+          text-align: center;
           color: $font-color-sub;
           cursor: pointer;
           padding: 4px 0 15px;
