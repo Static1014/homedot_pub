@@ -9,6 +9,7 @@ $(function () {
     el: '#vue_id',
     components: {},
     data: {
+      version: 'v1.0.0',
       store: {
         hw: {
           visible: false, // 是否显示
