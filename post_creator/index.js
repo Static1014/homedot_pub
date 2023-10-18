@@ -10,33 +10,55 @@ $(function () {
     components: {},
     data: {
       version: 'v1.0.0',
-      store: {
-        hw: {
+      hideStore: true,
+      storeList: [
+        {
           visible: false, // 是否显示
+          name: 'Google Play',
+          nameEn: 'Google Play',
+          isSvg: true,
+          img:'',
           ok: false, // 是否审核通过
           url: '' // 下载地址
         },
-        bd: {
-          visible: false,
+        {
+          visible: true,
+          name: '百度网盘',
+          nameEn: 'Baidu Cloud Disk',
+          img:'assets/img/store/bd_cloud.png',
           ok: true,
-          url: 'https://pan.baidu.com/s/1ngEfS0UHKfOGbzMIjxeWgw?pwd=d8aq'
+          url: 'https://pan.baidu.com/s/1lbTymQiKY_5KkABaMFTZ_A?pwd=pzd7'
         },
-        gp: {
+        {
           visible: false,
+          name: '华为应用市场',
+          nameEn: 'Huawei App Store',
+          img:'assets/img/store/huawei.png',
           ok: false,
           url: ''
         },
-        server: {
-          visible: false,
+        {
+          visible: true,
+          name: '123云盘',
+          nameEn: '123 Cloud Disk',
+          img:'assets/img/store/123.ico',
           ok: true,
-          url: './apk/pc_1.0.0(1)_23.10.17.apk'
+          url: 'https://www.123pan.com/s/4CQmjv-7uvGA.html'
+        },
+        {
+          visible: false,
+          name: '普通下载',
+          nameEn: 'Web Download',
+          img:'assets/img/logo_192.png',
+          ok: false,
+          url: ''
         }
-      },
+      ],
       isEn: false,
     },
     computed: {
       dlVisible() {
-        return this.store.hw.visible || this.store.bd.visible || this.store.gp.visible || this.store.server.visible
+        return !this.hideStore && this.storeList.filter(tmp => tmp.visible).length > 0
       },
       name() {
         return this.isEn ? 'Post Creator' : '图创'
@@ -53,25 +75,8 @@ $(function () {
       }
     },
     methods: {
-      clickDownload(index) {
-        switch (index) {
-          case 0:
-            // google play
-            this.openLink(this.store.gp.url)
-            break
-          case 1:
-            // 百度网盘
-            this.openLink(this.store.bd.url)
-            break
-          case 2:
-            // 华为
-            this.openLink(this.store.hw.url)
-            break
-          case 3:
-            // 华为
-            this.openLink(this.store.server.url)
-            break
-        }
+      clickDownload(url) {
+        this.openLink(url)
       },
       openLink(url) {
         window.open(url, '_blank')
