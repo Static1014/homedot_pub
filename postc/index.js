@@ -9,7 +9,7 @@ $(function () {
     el: '#vue_id',
     components: {},
     data: {
-      version: 'v1.1.0',
+      version: 'v1.1.1',
       hideStore: false,
       storeList: [
         {
@@ -27,7 +27,7 @@ $(function () {
           nameEn: 'Baidu Cloud Disk',
           img:'assets/img/store/bd_cloud.png',
           ok: true,
-          url: 'https://pan.baidu.com/s/16525pNlkh4xsIphzomWsmQ?pwd=viir'
+          url: 'https://pan.baidu.com/s/13WUjx-1aw2Hl523O2VfOLQ?pwd=1h2z'
         },
         {
           visible: false,
@@ -43,7 +43,7 @@ $(function () {
           nameEn: '123 Cloud Disk',
           img:'assets/img/store/123.ico',
           ok: true,
-          url: 'https://www.123pan.com/s/4CQmjv-oUvGA.html'
+          url: 'https://www.123pan.com/s/4CQmjv-klvGA.html'
         },
         {
           visible: true,
@@ -51,7 +51,7 @@ $(function () {
           nameEn: 'Web Download',
           img:'assets/img/logo_192.png',
           ok: true,
-          url: './apk/pc_1.1.0_2_23.10.20.apk'
+          url: './apk/pc_1.1.1_3_23.10.24.apk'
         }
       ],
       isEn: false,
