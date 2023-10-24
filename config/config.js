@@ -9,9 +9,10 @@ const config = {
     policeNo: '12011102001541', // 公安备案号
     icpNo: '津ICP备2023002266号-1', // icp备案号
   },
-  postCreator: {
+  pc: {
     policeNo: '12011102001541', // todo 公安备案号
-    icpNo: '津ICP备2023002266号-1', // todo icp备案号
+    icpNo: '津ICP备2023002266号-2A', // icp备案号
+    site: 'https://pc.homedot.space/post_creator/',
   },
 }
 
