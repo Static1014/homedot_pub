@@ -13,13 +13,13 @@ $(function () {
       hideStore: false,
       storeList: [
         {
-          visible: false, // 是否显示
+          visible: true, // 是否显示
           name: 'Google Play',
           nameEn: 'Google Play',
           isSvg: true,
           img:'',
-          ok: false, // 是否审核通过
-          url: '' // 下载地址
+          ok: true, // 是否审核通过
+          url: 'https://play.google.com/store/apps/details?id=com.static4u.pic_maker' // 下载地址
         },
         {
           visible: true,
