@@ -68,7 +68,7 @@ $(function () {
             '      <h3>2.Usage</h3>\n' +
             '      <p>After obtaining your data, the software will upload the necessary information to the server to be retained as business vouchers, such as equipment model, system version number, ANDROID ID, etc. Non-essential information will not be uploaded and will be deleted after local use. Specific uses are as follows:</p>\n' +
             '      <ol>\n' +
-            '        <li>Equipment model, system version、ANDROID ID: display in about, so that users can locate and query problems when they feedback;</li>\n' +
+            '        <li>Equipment model, system version、ANDROID ID: display in about, so that users can locate and query problems when they feed back;</li>\n' +
             '        <li>Camera and album: When importing local pictures, you need to use the camera and album;</li>\n' +
             '        <li>Local storage: Software generated images and part of the use of information (encrypted) will be saved in the form of files in the local;</li>\n' +
             '      </ol>\n' +
