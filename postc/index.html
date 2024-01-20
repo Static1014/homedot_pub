@@ -43,7 +43,7 @@
     <section id="download" v-if="dlVisible">
       <h3>{{isEn ? 'Download' : '下载地址'}}</h3>
       <br>
-      <div :class="['btn_download', item.ok?'':'checking']" v-for="item in storeList" v-if="item.visible" @click="clickDownload(item.url)">
+      <div :class="['btn_download', item.ok?'':'checking']" v-for="item in storeList" v-if="item.visible" @click="clickDownload(item)">
         <svg class="logo" v-if="item.isSvg" aria-hidden="true" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
           <path fill="none" d="M0,0h40v40H0V0z"></path>
           <g>

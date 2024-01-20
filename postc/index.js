@@ -9,7 +9,7 @@ $(function () {
     el: '#vue_id',
     components: {},
     data: {
-      version: 'v1.1.1',
+      version: 'v2.0.0',
       hideStore: false,
       storeList: [
         {
@@ -27,10 +27,10 @@ $(function () {
           nameEn: 'Baidu Cloud Disk',
           img:'assets/img/store/bd_cloud.png',
           ok: true,
-          url: 'https://pan.baidu.com/s/1_v4LKJndHFqJvJUZReITGQ?pwd=9q7w'
+          url: 'https://pan.baidu.com/s/1Gzry7b1JUgfLkFMQCkOxHw?pwd=tpr7'
         },
         {
-          visible: false,
+          visible: true,
           name: '华为应用市场',
           nameEn: 'Huawei App Store',
           img:'assets/img/store/huawei.png',
@@ -43,7 +43,7 @@ $(function () {
           nameEn: '123 Cloud Disk',
           img:'assets/img/store/123.ico',
           ok: true,
-          url: 'https://www.123pan.com/s/4CQmjv-B7vGA.html'
+          url: 'https://www.123pan.com/s/4CQmjv-4UdGA.html'
         },
         {
           visible: false,
@@ -51,7 +51,8 @@ $(function () {
           nameEn: 'Web Download',
           img:'assets/img/logo_192.png',
           ok: true,
-          url: './apk/pc_1.1.1_3_23.10.27.apk'
+          // url: './apk/pc_1.1.1_3_23.10.27.apk'
+          url: ''
         }
       ],
       isEn: false,
@@ -75,8 +76,12 @@ $(function () {
       }
     },
     methods: {
-      clickDownload(url) {
-        this.openLink(url)
+      clickDownload(item) {
+        if (isEmptyOrNull(item.url)) {
+          toast(this.isEn ? 'Coming soon' : '敬请期待')
+          return
+        }
+        this.openLink(item.url);
       },
       openLink(url) {
         window.open(url, '_blank')
