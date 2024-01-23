@@ -17,13 +17,14 @@ $(function () {
             '        本软件尊重并保护所有使用服务用户的个人隐私权。为了给您提供安全可靠的服务，本软件会按照本隐私权政策的规定使用和披露您的个人信息。但本软件将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本软件不会将这些信息对外披露或向第三方提供。本软件会不时更新本隐私权政策。您在同意本软件服务使用协议之时，即视为您已经同意本隐私权政策全部内容。</p>\n' +
             '\n' +
             '      <h3>1.适用范围</h3>\n' +
-            '      <p>在您使用本软件服务时，本软件将在得到您许可的情况下使用或记录的您手机上的硬件与信息，包括但不限于：设备型号、系统版本、ANDROID ID、SN、MAC、IMEI、相机、相册、本地存储等；</p>\n' +
+            '      <p>在您使用本软件服务时，本软件将在得到您许可的情况下使用或记录的您手机上的硬件与信息，包括但不限于：设备型号、系统版本、ANDROID ID、SN、MAC、IMEI、加速度传感器、相机、相册、本地存储等；</p>\n' +
             '\n' +
             '      <h3>2.信息的使用</h3>\n' +
-            '      <p>在获得您的数据之后，本软件会将必要信息上传至服务器，以留作业务办理凭证，如设备型号、系统版本号、ANDROID ID、SN、MAC、IMEI等。非必要信息不会上传，本地使用完成后即删除。具体使用如下：</p>\n' +
+            '      <p>在获得您的数据之后，本软件会将必要信息上传至服务器，以留作业务办理凭证，如设备型号、系统版本号、ANDROID ID、SN、MAC、IMEI、加速度传感器等。非必要信息不会上传，本地使用完成后即删除。具体使用如下：</p>\n' +
             '      <ol>\n' +
             '        <li>设备型号、系统版本、ANDROID ID、SN、MAC、IMEI：在关于中进行展示，以便用户反馈问题时进行问题定位与查询；</li>\n' +
             '        <li>相机、相册：导入本地图片时需要需要使用相机、相册；</li>\n' +
+            '        <li>加速度传感器：根据设备倾斜状态锁定拍照时的图片捕获状态，以防止照片保存时方向错误；</li>\n' +
             '        <li>本地存储：软件生成的图片及部分使用信息(加密)会以文件的形式保存在本地；</li>\n' +
             '      </ol>\n' +
             '\n' +
@@ -63,13 +64,14 @@ $(function () {
             '        The software respects and protects the personal privacy of all users of the service. In order to provide you with safe and reliable services, the software will use and disclose your personal information in accordance with the provisions of this Privacy policy. However, the software will treat such information with a high degree of diligence and prudence. Except as otherwise provided in this Privacy Policy, the Software will not disclose such information or provide it to third parties without your prior permission. The software will update this Privacy policy from time to time. When you agree to this Software Service Usage Agreement, it is deemed that you have agreed to all contents of this Privacy policy.</p>\n' +
             '\n' +
             '      <h3>1.Scope</h3>\n' +
-            '      <p>When you use the Software Service, the software will use or record the hardware and information on your mobile phone with your permission, including but not limited to: device model, system version, ANDROID ID, SN, MAC, IMEI, camera, photo album, local storage, etc.</p>\n' +
+            '      <p>When you use the Software Service, the software will use or record the hardware and information on your mobile phone with your permission, including but not limited to: device model, system version, ANDROID ID, SN, MAC, IMEI, camera, photo album, local storage, Acceleration sensor, etc.</p>\n' +
             '\n' +
             '      <h3>2.Usage</h3>\n' +
-            '      <p>After obtaining your data, the software will upload the necessary information to the server to be retained as business vouchers, such as equipment model, system version number, ANDROID ID, SN, MAC, IMEI, etc. Non-essential information will not be uploaded and will be deleted after local use. Specific uses are as follows:</p>\n' +
+            '      <p>After obtaining your data, the software will upload the necessary information to the server to be retained as business vouchers, such as equipment model, system version number, ANDROID ID, SN, MAC, IMEI, Acceleration sensor, etc. Non-essential information will not be uploaded and will be deleted after local use. Specific uses are as follows:</p>\n' +
             '      <ol>\n' +
             '        <li>Equipment model, system version, ANDROID ID, SN, MAC, IMEI: display in about, so that users can locate and query problems when they feed back;</li>\n' +
             '        <li>Camera and album: When importing local pictures, you need to use the camera and album;</li>\n' +
+            '        <li>Acceleration sensor: Lock capture orientation according to the current status of the device, which enables the captured file stored the correct orientation.</li>\n' +
             '        <li>Local storage: Software generated images and part of the use of information (encrypted) will be saved in the form of files in the local;</li>\n' +
             '      </ol>\n' +
             '\n' +
