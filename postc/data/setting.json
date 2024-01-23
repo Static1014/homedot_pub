@@ -7,5 +7,58 @@
   "adAddCount": 3,
   "downloadUrl": "",
   "msg": "",
-  "tipHeight": 0
+  "tipHeight": 0,
+  "intro": {
+    "img_root": "https://pc.homedot.space/assets/img/screenshoot",
+    "list": [
+      {
+        "en": {
+          "url": "/en/1.png",
+          "title": "Create What You Imagine",
+          "sub": "Add images and text, drag to rearrange, delete by tap"
+        },
+        "zh": {
+          "url": "/zh/1.png",
+          "title": "创你所想",
+          "sub": "新增图文、拖动排序、一键删除"
+        }
+      },
+      {
+        "en": {
+          "url": "/en/2.png",
+          "title": "Extreme Speed Creation",
+          "sub": "One-click image creation, quick share, save to album"
+        },
+        "zh": {
+          "url": "/zh/2.png",
+          "title": "极速创造",
+          "sub": "一键成图，快速分享，保存相册"
+        }
+      },
+      {
+        "en": {
+          "url": "/en/3.png",
+          "title": "Abundant Resources",
+          "sub": "Beautiful images, abundance of content, endless creativity"
+        },
+        "zh": {
+          "url": "/zh/3.png",
+          "title": "海量资源",
+          "sub": "美图爽文，应有尽有，创造无限"
+        }
+      },
+      {
+        "en": {
+          "url": "/en/4.png",
+          "title": "Post Results Review",
+          "sub": "All your creative results are here, ready to be accessed, shared anytime"
+        },
+        "zh": {
+          "url": "/zh/4.png",
+          "title": "成果回顾",
+          "sub": "创造成果都在这里，随时查阅、分享"
+        }
+      }
+    ]
+  }
 }
