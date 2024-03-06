@@ -1,0 +1,62 @@
+{
+  "privacyUrl": "",
+  "downloadUrl": "",
+  "version": "",
+  "forceUpdate": false,
+  "stopMsg": "",
+  "updateMsg": "",
+  "mail": "",
+  "intro": {
+    "img_root": "https://un.homedot.space/assets/img/screenshoot",
+    "list": [
+      {
+        "en": {
+          "url": "/en/1.png",
+          "title": "Classical Puzzle",
+          "sub": "Let's see who can solve it"
+        },
+        "zh": {
+          "url": "/zh/1.png",
+          "title": "经典解谜",
+          "sub": "点点看，看谁能解开这个谜团"
+        }
+      },
+      {
+        "en": {
+          "url": "/en/2.png",
+          "title": "Oh, Awesome",
+          "sub": "You're so good, I just found out"
+        },
+        "zh": {
+          "url": "/zh/2.png",
+          "title": "哎哟，不错哦",
+          "sub": "你这么厉害，我竟然才知道"
+        }
+      },
+      {
+        "en": {
+          "url": "/en/3.png",
+          "title": "From Easy to Hard",
+          "sub": "Different difficulty, you can choose"
+        },
+        "zh": {
+          "url": "/zh/3.png",
+          "title": "从易到难",
+          "sub": "不同难度，任你选择"
+        }
+      },
+      {
+        "en": {
+          "url": "/en/4.png",
+          "title": "Time Leaderboard",
+          "sub": "Let's see who's the fastest. The fastest is the best"
+        },
+        "zh": {
+          "url": "/zh/4.png",
+          "title": "用时排行",
+          "sub": "看看谁最快，最快最厉害"
+        }
+      }
+    ]
+  }
+}

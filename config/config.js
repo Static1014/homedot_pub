@@ -1,6 +1,6 @@
 // 全局配置变量-备案信息
 const config = {
-  copyVisible: true,  // 是否显示备案信息
+  copyVisible: true,
   author: '熊健',
   authorEn: 'Xiong Jian',
   email: '420048248@qq.com',
@@ -10,12 +10,21 @@ const config = {
     policeNo: '12011102001541', // 公安备案号
     icpNo: '津ICP备2023002266号-1', // icp备案号
     site: 'https://homedot.space',
+    copyVisible: true, // 是否显示备案信息
   },
   pc: {
-    policeNo: '12011102001541', // todo 公安备案号
+    policeNo: '', // todo 公安备案号
     icpNo: '津ICP备2023002266号-2A', // icp备案号
     site: 'https://pc.homedot.space',
+    copyVisible: false,
   },
+  un: {
+    policeNo: '', // todo 公安备案号
+    icpNo: '', // todo icp备案号
+    site: 'https://un.homedot.space',
+    copyVisible: false,
+  },
+
 }
 
 /**
@@ -31,7 +40,7 @@ function getFooterHtml(project, isEn = false) {
     author + "：" + getAuthor(isEn) + "&emsp;" +
     email + "：<a href='mailto:" + config.email + "'>" + config.email + "</a>" +
     "</span>" +
-    (config.copyVisible ? (
+    (project.copyVisible ? (
       "&emsp;<a id='ga' href='" + config.policeUrl + project.policeNo + "' target='_blank'><img src='../app_base/assets/img/ic_beian.png' alt='备案'/>" + config.policeRecordPrefix + project.policeNo + "号</a>" +
       "&emsp;<a href='https://beian.miit.gov.cn' target='_blank'>" + project.icpNo + "</a>"
     ) : '')

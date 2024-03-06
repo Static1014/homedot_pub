@@ -196,6 +196,7 @@ ignoreDirs  = [
     'app_base' + DIR_INTERVAL + 'json',
     'app_base' + DIR_INTERVAL + 'libs' + DIR_INTERVAL + 'pdf',
     'postc' + DIR_INTERVAL + 'data' + DIR_INTERVAL + 'setting.json',
+    'unblock_num' + DIR_INTERVAL + 'data' + DIR_INTERVAL + 'setting.json',
     # 'app_base' + DIR_INTERVAL + 'ui',
 ]
 # 指定要导出的app_pages下的功能

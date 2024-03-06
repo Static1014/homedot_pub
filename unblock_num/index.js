@@ -9,11 +9,11 @@ $(function () {
     el: '#vue_id',
     components: {},
     data: {
-      version: 'v2.0.0',
+      version: 'v1.0.0',
       hideStore: false,
       storeList: [
         {
-          visible: true,
+          visible: false,
           name: '华为应用市场',
           nameEn: 'Huawei AppGallery',
           img: '../app_base/assets/img/store/huawei.png',
@@ -21,7 +21,7 @@ $(function () {
           url: 'https://appgallery.huawei.com/app/C109424593'
         },
         {
-          visible: true,
+          visible: false,
           name: '腾讯应用宝',
           nameEn: 'Tencent App Gallery',
           img: '../app_base/assets/img/store/yyb.svg',
@@ -70,7 +70,7 @@ $(function () {
         return !this.hideStore && this.storeList.filter(tmp => tmp.visible).length > 0
       },
       name() {
-        return this.isEn ? 'Post Creator' : '图创'
+        return this.isEn ? 'Unblock Numbers' : '数字华容道'
       },
     },
     methods: {
