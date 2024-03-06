@@ -54,7 +54,7 @@
           </g>
         </svg>
         <img class="logo" v-else :src="item.img" :alt="isEn?item.nameEn:item.name">
-        {{isEn?item.nameEn:item.name}}{{item.ok ? '' : (isEn?'(Uploading)':'(审核中)')}}
+        {{isEn?item.nameEn:item.name}}{{item.ok ? '' : (isEn?'(In review)':'(审核中)')}}
       </div>
     </section>
   </div>

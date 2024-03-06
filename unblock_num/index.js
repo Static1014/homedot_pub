@@ -18,7 +18,7 @@ $(function () {
           nameEn: 'Huawei AppGallery',
           img: '../app_base/assets/img/store/huawei.png',
           ok: true,
-          url: 'https://appgallery.huawei.com/app/C109424593'
+          url: ''
         },
         {
           visible: false,
@@ -26,7 +26,7 @@ $(function () {
           nameEn: 'Tencent App Gallery',
           img: '../app_base/assets/img/store/yyb.svg',
           ok: true,
-          url: 'https://sj.qq.com/appdetail/com.static4u.pic_maker'
+          url: ''
         },
         {
           visible: true, // 是否显示
@@ -34,24 +34,24 @@ $(function () {
           nameEn: 'Google Play',
           isSvg: true,
           img: '',
-          ok: true, // 是否审核通过
-          url: 'https://play.google.com/store/apps/details?id=com.static4u.pic_maker' // 下载地址
+          ok: false, // 是否审核通过
+          url: 'https://play.google.com/store/apps/details?id=com.static4u.unblock_num' // 下载地址
         },
         {
-          visible: true,
+          visible: false,
           name: '百度网盘',
           nameEn: 'Baidu Cloud Disk',
           img: '../app_base/assets/img/store/bd_cloud.png',
           ok: true,
-          url: 'https://pan.baidu.com/s/1Gzry7b1JUgfLkFMQCkOxHw?pwd=tpr7'
+          url: ''
         },
         {
-          visible: true,
+          visible: false,
           name: '123云盘',
           nameEn: '123 Cloud Disk',
           img: '../app_base/assets/img/store/123.ico',
           ok: true,
-          url: 'https://www.123pan.com/s/4CQmjv-4UdGA.html'
+          url: ''
         },
         {
           visible: false,
@@ -59,7 +59,6 @@ $(function () {
           nameEn: 'Web Download',
           img: 'assets/img/logo_192.png',
           ok: true,
-          // url: './apk/pc_1.1.1_3_23.10.27.apk'
           url: ''
         }
       ],
