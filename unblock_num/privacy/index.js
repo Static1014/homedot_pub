@@ -57,7 +57,7 @@ $(function () {
             '      </ul>'
         },
         en: {
-          title: 'Post Creator Privacy Policy',
+          title: 'Unblock Num Privacy Policy',
           content: '<p>\n' +
             '        The software respects and protects the personal privacy of all users of the service. In order to provide you with safe and reliable services, the software will use and disclose your personal information in accordance with the provisions of this Privacy policy. However, the software will treat such information with a high degree of diligence and prudence. Except as otherwise provided in this Privacy Policy, the Software will not disclose such information or provide it to third parties without your prior permission. The software will update this Privacy policy from time to time. When you agree to this Software Service Usage Agreement, it is deemed that you have agreed to all contents of this Privacy policy.</p>\n' +
             '\n' +
@@ -111,6 +111,13 @@ $(function () {
     methods: {
       clickLang() {
         this.isEn = !this.isEn
+      }
+    },
+    watch: {
+      isEn: {
+        handler(newVal, oldVal) {
+          document.title = newVal ? 'Privacy Policy' : '隐私政策'
+        }
       }
     },
     mounted() {

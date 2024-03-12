@@ -55,7 +55,7 @@ $(function () {
             '      <h3>主体信息</h3>\n' +
             '      <ul>\n' +
             '        <li>所有者：' + getAuthor(false) + '</li>\n' +
-            '        <li>官网地址：<a href="'+config.pc.site+'" target="_blank">'+config.pc.site+'</a></li>\n' +
+            '        <li>官网地址：<a href="' + config.pc.site + '" target="_blank">' + config.pc.site + '</a></li>\n' +
             '      </ul>'
         },
         en: {
@@ -102,7 +102,7 @@ $(function () {
             '      <h3>Subject</h3>\n' +
             '      <ul>\n' +
             '        <li>Owner：' + getAuthor(true) + '</li>\n' +
-            '        <li>Website：<a href="'+config.pc.site+'" target="_blank">'+config.pc.site+'</a></li>\n' +
+            '        <li>Website：<a href="' + config.pc.site + '" target="_blank">' + config.pc.site + '</a></li>\n' +
             '      </ul>'
         }
       }
@@ -117,9 +117,17 @@ $(function () {
         this.isEn = !this.isEn
       }
     },
+    watch: {
+      isEn: {
+        handler(newVal, oldVal) {
+          document.title = newVal ? 'Privacy Policy' : '隐私政策'
+        }
+      }
+    },
     mounted() {
       hideLoading()
       this.isEn = parseGetParam('lang') === 'en'
+      document.title = this.isEn ? 'Privacy Policy' : '隐私政策'
     }
   })
 })

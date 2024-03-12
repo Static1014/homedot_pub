@@ -90,6 +90,13 @@ $(function () {
         this.openLink('./privacy/index.html?lang=' + (this.isEn ? 'en' : 'zh'))
       }
     },
+    watch: {
+      isEn: {
+        handler(newVal, oldVal) {
+          document.title = this.name
+        }
+      }
+    },
     mounted() {
       hideLoading()
       this.isEn = parseGetParam('lang') === 'en'
