@@ -67,7 +67,7 @@ $(function () {
         visible: true,
         content: [
           '数字华容道，免费挑战！快来试试吧！',
-          '24.3.25-24.3.31，<a href="data/promotion_codes.csv" target="_blank">100个免费促销兑换码</a>，先到先得！',
+          '24.3.25-24.3.31，<a href="data/promotion.html" target="_blank">100个免费促销兑换码</a>，先到先得！',
           '锻炼智力，挑战自我！简单规则，无尽乐趣！',
           '快来解锁更多关卡，成为数字解谜高手！'
         ]
