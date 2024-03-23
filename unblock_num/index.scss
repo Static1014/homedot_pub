@@ -105,6 +105,21 @@ html {
               }
             }
           }
+
+          &#promotion {
+            p {
+              color: $font-color-important;
+              font-size: $font-size-large;
+
+              a {
+                font-weight: bold;
+                color: $color-red;
+                font-size: $font-size-large + 4px;
+                text-underline: $color-red;
+                text-decoration: underline;
+              }
+            }
+          }
         }
       }
 

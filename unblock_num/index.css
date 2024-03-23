@@ -105,6 +105,15 @@ html {
               width: 24px;
               height: 24px;
               margin-right: 8px; }
+          html body .container .content section#promotion p {
+            color: #168de9;
+            font-size: 16px; }
+            html body .container .content section#promotion p a {
+              font-weight: bold;
+              color: #de6161;
+              font-size: 20px;
+              text-underline: #de6161;
+              text-decoration: underline; }
       html body .container .footer {
         background: none;
         color: #bbbbbb;

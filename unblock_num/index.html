@@ -57,6 +57,9 @@
         {{isEn?item.nameEn:item.name}}{{item.ok ? '' : (isEn?'(In review)':'(审核中)')}}
       </div>
     </section>
+    <section id="promotion" v-if="promotion.visible">
+      <p v-for="tmp in promotion.content" v-html="tmp"></p>
+    </section>
   </div>
   <div class="footer">
     <div class="author" v-html="getFooterHtml(config.pc, isEn)"></div>
