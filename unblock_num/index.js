@@ -70,6 +70,12 @@ $(function () {
           '24.3.25-24.3.31，<a href="data/promotion.html" target="_blank">100个免费促销兑换码</a>，先到先得！',
           '锻炼智力，挑战自我！简单规则，无尽乐趣！',
           '快来解锁更多关卡，成为数字解谜高手！'
+        ],
+        content_en: [
+          'Unblock Num, free challenge! Come and try it!',
+          '24.3.25-24.3.31,<a href="data/promotion.html" target="_blank">100 free promotional codes</a>, first come, first served!',
+          'Exercise your intelligence and challenge yourself! Simple rules, endless fun!',
+          'Come and unlock more levels and become a master of digital puzzles!'
         ]
       }
     },
