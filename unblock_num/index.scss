@@ -1,9 +1,9 @@
 @import "../app_base/css/mixin";
 
-$cc1: #4BBCF4;
-$cc2: #61C0BF;
-$cc3: #BBDED6;
-$cc4: #FFB6B9;
+$cc1: #4bbcf4;
+$cc2: #61c0bf;
+$cc3: #bbded6;
+$cc4: #ffb6b9;
 $cc5: #fae3d9;
 $cc6: #c7bde3;
 
@@ -30,7 +30,6 @@ html {
           }
 
           &#top {
-
             h1 {
               color: $font-color-white;
               text-align: center;
@@ -41,7 +40,8 @@ html {
               cursor: pointer;
               padding: 10px 0 6px;
 
-              .zh, .en {
+              .zh,
+              .en {
                 font-size: $font-size-small;
 
                 &.selected {
@@ -103,8 +103,7 @@ html {
                 font-weight: bold;
                 color: $color-red;
                 font-size: $font-size-large + 4px;
-                text-underline: $color-red;
-                text-decoration: underline;
+                text-decoration: underline $color-red;
               }
             }
           }

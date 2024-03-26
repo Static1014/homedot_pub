@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--主题色-->
   <meta name="theme-color" content="#61C0BF">
@@ -24,37 +25,40 @@
   <script type="text/javascript" src="../app_base/ui/vue/gallery/index.js"></script>
   <link rel="stylesheet" href="../app_base/ui/vue/gallery/index.css">
 </head>
+
 <body>
-<div class="container" id="vue_id" v-cloak>
-  <div class="content">
-    <section id="top">
-      <img id="logo" src="assets/img/logo_192.png" alt="logo">
-      <h1>{{name}} {{version}}</h1>
-      <div class="lang" @click="clickLang">
-        <span :class="['zh', isEn?'':'selected']">中文</span> / <span :class="['en', isEn?'selected':'']">English</span>
-      </div>
-      <div class="policy" @click="clickPolicy">{{isEn ? 'Privacy Policy' : '隐私政策'}}</div>
-    </section>
-    <section class="gallery-section">
-      <gallery :list="galleryList"></gallery>
-    </section>
-    <section id="download" v-if="dlVisible">
-      <h3>{{isEn ? 'Download' : '下载地址'}}</h3>
-      <br>
-      <div :class="['btn_download', item.ok?'':'checking']" v-for="item in storeList" v-if="item.visible" @click="clickDownload(item)">
-        <gp-logo class="logo" v-if="item.isSvg"></gp-logo>
-        <img class="logo" v-else :src="item.img" :alt="isEn?item.nameEn:item.name">
-        {{isEn ? item.nameEn : item.name}}{{item.ok ? '' : (isEn ? '(In review)' : '(审核中)')}}
-      </div>
-    </section>
-    <section id="promotion" v-if="promotion.visible">
-      <p v-for="tmp in isEn?promotion.content_en:promotion.content" v-html="tmp"></p>
-    </section>
+  <div class="container" id="vue_id" v-cloak>
+    <div class="content">
+      <section id="top">
+        <img id="logo" src="assets/img/logo_192.png" alt="logo">
+        <h1>{{name}} {{version}}</h1>
+        <div class="lang" @click="clickLang">
+          <span :class="['zh', isEn?'':'selected']">中文</span> / <span :class="['en', isEn?'selected':'']">English</span>
+        </div>
+        <div class="policy" @click="clickPolicy">{{isEn ? 'Privacy Policy' : '隐私政策'}}</div>
+      </section>
+      <section class="gallery-section">
+        <gallery :list="galleryList"></gallery>
+      </section>
+      <section id="download" v-if="dlVisible">
+        <h3>{{isEn ? 'Download' : '下载地址'}}</h3>
+        <br>
+        <div :class="['btn_download', item.ok?'':'checking']" v-for="item in storeList" v-if="item.visible"
+          @click="clickDownload(item)">
+          <gp-logo class="logo" v-if="item.isSvg"></gp-logo>
+          <img class="logo" v-else :src="item.img" :alt="isEn?item.nameEn:item.name">
+          {{isEn ? item.nameEn : item.name}}{{item.ok ? '' : (isEn ? '(In review)' : '(审核中)')}}
+        </div>
+      </section>
+      <section id="promotion" v-if="promotion.visible">
+        <p v-for="tmp in isEn?promotion.content_en:promotion.content" v-html="tmp"></p>
+      </section>
+    </div>
+    <div class="footer">
+      <div class="author" v-html="getFooterHtml(config.pc, isEn)"></div>
+    </div>
   </div>
-  <div class="footer">
-    <div class="author" v-html="getFooterHtml(config.pc, isEn)"></div>
-  </div>
-</div>
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
