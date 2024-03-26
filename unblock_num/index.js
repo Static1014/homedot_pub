@@ -7,7 +7,9 @@ $(function () {
 
   new Vue({
     el: '#vue_id',
-    components: {},
+    components: {
+      'gp-logo': GpLogo,
+    },
     data: {
       version: 'v1.1.0',
       hideStore: false,
