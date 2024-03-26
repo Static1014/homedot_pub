@@ -21,6 +21,8 @@
   <script type="text/javascript" src="../app_base/js/app_config.js"></script>
   <script type="text/javascript" src="../app_base/js/commonUtils.js"></script>
   <script type="text/javascript" src="../app_base/ui/vue/gp-logo.js"></script>
+  <script type="text/javascript" src="../app_base/ui/vue/gallery/index.js"></script>
+  <link rel="stylesheet" href="../app_base/ui/vue/gallery/index.css">
 </head>
 <body>
 <div class="container" id="vue_id" v-cloak>
@@ -33,13 +35,8 @@
       </div>
       <div class="policy" @click="clickPolicy">{{isEn ? 'Privacy Policy' : '隐私政策'}}</div>
     </section>
-    <section id="box-intro">
-      <div class="intro">
-        <img :src="'assets/img/intro/'+(isEn?'en':'zh')+'/1.png'" alt="intro">
-        <img :src="'assets/img/intro/'+(isEn?'en':'zh')+'/2.png'" alt="intro">
-        <img :src="'assets/img/intro/'+(isEn?'en':'zh')+'/3.png'" alt="intro">
-        <img :src="'assets/img/intro/'+(isEn?'en':'zh')+'/4.png'" alt="intro">
-      </div>
+    <section class="gallery-section">
+      <gallery :list="galleryList"></gallery>
     </section>
     <section id="download" v-if="dlVisible">
       <h3>{{isEn ? 'Download' : '下载地址'}}</h3>

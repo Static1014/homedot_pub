@@ -7,7 +7,10 @@ $(function () {
 
   new Vue({
     el: '#vue_id',
-    components: {},
+    components: {
+      'gp-logo': GpLogo,
+      'gallery': Gallery,
+    },
     data: {
       version: 'v2.0.0',
       hideStore: false,
@@ -66,6 +69,14 @@ $(function () {
       isEn: false,
     },
     computed: {
+      galleryList() {
+        return [
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/1.png',
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/2.png',
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/3.png',
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/4.png'
+        ]
+      },
       dlVisible() {
         return !this.hideStore && this.storeList.filter(tmp => tmp.visible).length > 0
       },

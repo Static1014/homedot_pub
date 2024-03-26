@@ -53,26 +53,8 @@ html {
             color: #fae3d9;
             padding: 10px 0 4px;
             cursor: pointer; }
-          html body .container .content section#box-intro {
-            width: 100%;
-            padding: 0;
-            overflow-x: scroll; }
-            html body .container .content section#box-intro .intro {
-              display: flex;
-              display: -webkit-flex;
-              display: -o-flex;
-              display: -ms-flex;
-              flex-direction: row;
-              -ms-flex-direction: row;
-              -webkit-flex-direction: row;
-              justify-content: space-between;
-              -webkit-justify-content: space-between;
-              align-items: center;
-              -webkit-align-items: center; }
-              html body .container .content section#box-intro .intro img {
-                object-fit: contain;
-                width: 300px;
-                margin-right: 10px; }
+          html body .container .content section.gallery-section {
+            width: 100%; }
           html body .container .content section#download h3 {
             color: #ffffff; }
           html body .container .content section#download .btn_download {

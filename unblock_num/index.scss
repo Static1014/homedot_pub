@@ -58,20 +58,8 @@ html {
             }
           }
 
-          &#box-intro {
+          &.gallery-section {
             width: 100%;
-            padding: 0;
-            overflow-x: scroll;
-
-            .intro {
-              @include flex;
-
-              img {
-                object-fit: contain;
-                width: 300px;
-                margin-right: 10px;
-              }
-            }
           }
 
           &#download {

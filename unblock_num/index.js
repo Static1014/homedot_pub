@@ -4,11 +4,11 @@ $(function () {
     // addFloatBtn(reloadPage, baseUrl + '/app_base/assets/img/reload.png')
   }
 
-
   new Vue({
     el: '#vue_id',
     components: {
       'gp-logo': GpLogo,
+      'gallery': Gallery,
     },
     data: {
       version: 'v1.1.0',
@@ -82,6 +82,14 @@ $(function () {
       }
     },
     computed: {
+      galleryList() {
+        return [
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/1.png',
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/2.png',
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/3.png',
+          'assets/img/intro/' + (this.isEn ? 'en' : 'zh') + '/4.png'
+        ]
+      },
       dlVisible() {
         return !this.hideStore && this.storeList.filter(tmp => tmp.visible).length > 0
       },

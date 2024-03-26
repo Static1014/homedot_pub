@@ -1,0 +1,22 @@
+@import "../../../css/mixin";
+
+.gallery-container {
+  width: 100%;
+  @include flex(row, center);
+
+  .gallery-content {
+    margin: 0 auto;
+    overflow-x: auto;
+    @include flex;
+
+    img {
+      object-fit: contain;
+      width: 200px;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
