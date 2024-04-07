@@ -1,7 +1,12 @@
+"use strict"
+
 $(function () {
   showLoading()
   if (isDebug) {
+    // 刷新按钮
     // addFloatBtn(reloadPage, baseUrl + '/app_base/assets/img/reload.png')
+    // 模拟控制台
+    // initLogView()
   }
 
   new Vue({

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--safari、chrome主题背景色-->
   <meta name="theme-color" content="#f2f2f2">
@@ -20,25 +21,36 @@
   <script type="text/javascript" src="../app_base/js/platform.js"></script>
   <script type="text/javascript" src="../app_base/js/axiosUtil.js"></script>
 </head>
+
 <body>
-<div class="container" id="vue_id" v-cloak>
-  <div class="content">
-    <section id="ch">
-      <h1>{{name}}</h1>
-      <p v-html="author"></p>
-      <p v-html="poem"></p>
-    </section>
-    <!--<section id="en">-->
-    <!--  <p v-html="poem_en"></p>-->
-    <!--</section>-->
-    <!--<section id="jp">-->
-    <!--  <p v-html="poem_jp"></p>-->
-    <!--</section>-->
+  <div class="container" id="vue_id" v-cloak>
+    <div class="content">
+      <section id="ch">
+        <h1>{{name}}</h1>
+        <p v-html="author"></p>
+        <p v-html="poem"></p>
+      </section>
+      <!--<section id="en">-->
+      <!--  <p v-html="poem_en"></p>-->
+      <!--</section>-->
+      <!--<section id="jp">-->
+      <!--  <p v-html="poem_jp"></p>-->
+      <!--</section>-->
+      <section id="poem_list">
+        <div v-for="tmp in poemList" class="poem-item">
+          <h1>{{tmp.name}}</h1>
+          <p v-html="tmp.author"></p>
+          <p class="item-content">
+            <span v-for="part in tmp.content" v-html="part"></span>
+          </p>
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+      <div class="author" v-html="getFooterHtml(config.homedot)"></div>
+    </div>
   </div>
-  <div class="footer">
-    <div class="author" v-html="getFooterHtml(config.homedot)"></div>
-  </div>
-</div>
-<script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

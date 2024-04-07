@@ -98,7 +98,7 @@ function clearLog() {
  * @param log 内容
  * @param level 日志等级（e: error， i：info， w：warning，crash：exception）
  */
-function addLog(log, level) { 
+function addLog(log, level) {
   if (myLogView) {
     let logItem = $('<div class="log-item ' + level + '"></div>')
     logItem.text(log)
@@ -352,15 +352,15 @@ function toast(txt, bgColor, fontColor, delayTime) {
       backgroundColor: bgColor ? bgColor : "#de6161", // 默认红底白字
       color: fontColor ? fontColor : "#FFF"
     });
-    toast.css(isWidthFull ? {width: 'calc(100% - 32px)'} : {maxWidth: isPortraitWindow() ? 'calc(100% - 32px)' : "40%"});
-    toast.css(isTop ? {top: -100} : {bottom: -100});
+    toast.css(isWidthFull ? { width: 'calc(100% - 32px)' } : { maxWidth: isPortraitWindow() ? 'calc(100% - 32px)' : "40%" });
+    toast.css(isTop ? { top: -100 } : { bottom: -100 });
     toast.html(txt);
 
     if (!delayTime) {
       delayTime = 1500;
     }
-    let inAnim = isTop ? {top: 16, opacity: 1} : {bottom: "5%", opacity: 1}
-    let outAnim = isTop ? {top: -100, opacity: 0} : {bottom: -100, opacity: 0}
+    let inAnim = isTop ? { top: 16, opacity: 1 } : { bottom: "5%", opacity: 1 }
+    let outAnim = isTop ? { top: -100, opacity: 0 } : { bottom: -100, opacity: 0 }
 
     toast.stop().animate(inAnim).delay(delayTime).animate(outAnim);
   }
@@ -547,7 +547,7 @@ function showDialog(jqContent, dialogId, rootId, clickGroundToClose, isScrollHor
       "overflow": "hidden"
     })
   } else {
-    $("body").css({"overflow": "hidden"})
+    $("body").css({ "overflow": "hidden" })
   }
 
   let dialogs = $(".m-dialog-cover")
@@ -1082,9 +1082,9 @@ let moveListener = e => {
 function stopBodyScroll(jqTarget) {
   document.body.style.overflow = 'hidden'
   if (jqTarget) {
-    jqTarget[0].addEventListener('touchmove', moveListener, {passive: false});
+    jqTarget[0].addEventListener('touchmove', moveListener, { passive: false });
   } else {
-    document.addEventListener('touchmove', moveListener, {passive: false});
+    document.addEventListener('touchmove', moveListener, { passive: false });
   }
 }
 
@@ -1202,7 +1202,7 @@ function addWaterMask(str, jqEl) {
     })
     jqEl.prepend(wm)
     // 水印需要让取消上层元素背景，否则会被遮挡
-    jqEl.children().css({background: 'none'})
+    jqEl.children().css({ background: 'none' })
     wm.watermark({
       texts: [str],
       textColor: '#e2e2e2',

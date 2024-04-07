@@ -18,7 +18,8 @@ html {
         section {
           background: none;
 
-          h1, p {
+          h1,
+          p {
             margin-top: 8px;
             line-height: 1.4;
           }
@@ -27,10 +28,15 @@ html {
             @include flex(column, top);
           }
 
-          &#en {
-          }
+          &#poem_list {
+            .poem-item {
+              @include flex(column, center);
+              margin-bottom: 16px;
 
-          &#jp {
+              .item-content {
+                @include flex(column, center);
+              }
+            }
           }
         }
       }
@@ -51,7 +57,10 @@ html {
           flex-wrap: wrap;
 
           a {
-            &:link, &:visited, &:hover, &:active {
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
               color: $font-color-normal;
             }
           }
