@@ -1,5 +1,3 @@
-@use "sass:math";
-
 // color
 $color-white: #ffffff;
 $color-black: #000000;
@@ -43,10 +41,14 @@ $google-blue: #4285f4;
 
 // font size
 // ***  safari中字体小于16px时，点击输入框，页面会放大
-$font-size-large: math.div(32px, 2);
-$font-size-base: math.div(28px, 2);
-$font-size-small: math.div(26px, 2);
-$font-size-btn: math.div(28px, 2);
+//$font-size-large: math.div(32px, 2);
+//$font-size-base: math.div(28px, 2);
+//$font-size-small: math.div(26px, 2);
+//$font-size-btn: math.div(28px, 2);
+$font-size-large: 32px/2;
+$font-size-base: 28px/2;
+$font-size-small: 26px/2;
+$font-size-btn: 28px/2;
 
 $font-size-h: $font-size-large;
 

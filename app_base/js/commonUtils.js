@@ -236,7 +236,8 @@ function goBack() {
  * 刷新页面 todo 可能存在兼容性或者不生效问题
  */
 function reloadPage() {
-  location.reload()
+  window.location.reload();
+  // location.reload()
   // history.go(0)
   // location.reload()
   // location=location
@@ -272,6 +273,7 @@ function addFloatBtn(callback, imgSrc) {
  * @returns {{screenWidth: number, screenHeight: number, bodyHeight: number, screenAvailWidth: number, screenAvailHeight: number, bodyWidth: number}}
  */
 function getDeviceSize() {
+
   let size = {
     screenWidth: window.screen.width,
     screenHeight: window.screen.height,
@@ -296,25 +298,35 @@ function isPortraitWindow() {
 
 /**
  * 复制到剪切板 todo 存在兼容性问题
- * @param txt 内容
+ * @param text 内容
  */
-function copyToClipboard(txt) {
-  if (txt) {
-    let i = document.createElement("input");
-    i.setAttribute("readonly", 'readonly');
-    i.setAttribute("value", txt);
-    i.className = 'invisible';
-    document.body.appendChild(i);
-    i.setSelectionRange(0, txt.length);
-    if (document.execCommand('copy')) {
-      document.execCommand('copy');
-      logI("复制成功: " + txt);
-      toast("复制成功");
-    } else {
-      toastError("当前设备不支持复制到剪切板");
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.permissions) {
+    copyToClipboard = (text) => {
+      navigator.clipboard.writeText(text);
+      logI("1 复制成功: " + text);
+      toastSuc("复制成功");
     }
-    document.body.removeChild(i);
+  } else {
+    copyToClipboard = (text) => {
+      let i = document.createElement("input");
+      i.setAttribute("value", text);
+      // 防止键盘弹出关闭导致闪屏
+      i.setAttribute("readonly", 'readonly');
+      document.body.appendChild(i);
+      i.select();
+      if (document.execCommand('copy')) {
+        document.execCommand('copy');
+        logI("2 复制成功: " + text);
+        toastSuc("复制成功");
+      } else {
+        toastError("当前设备不支持复制到剪切板");
+      }
+      document.body.removeChild(i);
+    }
   }
+
+  copyToClipboard(text)
 }
 
 /**
@@ -352,15 +364,15 @@ function toast(txt, bgColor, fontColor, delayTime) {
       backgroundColor: bgColor ? bgColor : "#de6161", // 默认红底白字
       color: fontColor ? fontColor : "#FFF"
     });
-    toast.css(isWidthFull ? { width: 'calc(100% - 32px)' } : { maxWidth: isPortraitWindow() ? 'calc(100% - 32px)' : "40%" });
-    toast.css(isTop ? { top: -100 } : { bottom: -100 });
+    toast.css(isWidthFull ? {width: 'calc(100% - 32px)'} : {maxWidth: isPortraitWindow() ? 'calc(100% - 32px)' : "40%"});
+    toast.css(isTop ? {top: -100} : {bottom: -100});
     toast.html(txt);
 
     if (!delayTime) {
       delayTime = 1500;
     }
-    let inAnim = isTop ? { top: 16, opacity: 1 } : { bottom: "5%", opacity: 1 }
-    let outAnim = isTop ? { top: -100, opacity: 0 } : { bottom: -100, opacity: 0 }
+    let inAnim = isTop ? {top: 16, opacity: 1} : {bottom: "5%", opacity: 1}
+    let outAnim = isTop ? {top: -100, opacity: 0} : {bottom: -100, opacity: 0}
 
     toast.stop().animate(inAnim).delay(delayTime).animate(outAnim);
   }
@@ -547,7 +559,7 @@ function showDialog(jqContent, dialogId, rootId, clickGroundToClose, isScrollHor
       "overflow": "hidden"
     })
   } else {
-    $("body").css({ "overflow": "hidden" })
+    $("body").css({"overflow": "hidden"})
   }
 
   let dialogs = $(".m-dialog-cover")
@@ -1020,9 +1032,9 @@ function initMobile() {
  * 2、img标签的src属性改成data-lazy-src，如"<img src='xxx.png'/>"改成"<img data-lazy-src='xxx.png'/>"
  * 3、在jquery初始化成功后调用commonUtils中的lazyLoadImg()方法，且必须在UI之后（一般在body内部的最后），如：
  * $(function () {
-    lazyLoadImg()
-    ...
-  })
+ lazyLoadImg()
+ ...
+ })
  */
 function lazyLoadImg() {
   // 检查是否需要启动懒加载
@@ -1082,9 +1094,9 @@ let moveListener = e => {
 function stopBodyScroll(jqTarget) {
   document.body.style.overflow = 'hidden'
   if (jqTarget) {
-    jqTarget[0].addEventListener('touchmove', moveListener, { passive: false });
+    jqTarget[0].addEventListener('touchmove', moveListener, {passive: false});
   } else {
-    document.addEventListener('touchmove', moveListener, { passive: false });
+    document.addEventListener('touchmove', moveListener, {passive: false});
   }
 }
 
@@ -1202,7 +1214,7 @@ function addWaterMask(str, jqEl) {
     })
     jqEl.prepend(wm)
     // 水印需要让取消上层元素背景，否则会被遮挡
-    jqEl.children().css({ background: 'none' })
+    jqEl.children().css({background: 'none'})
     wm.watermark({
       texts: [str],
       textColor: '#e2e2e2',

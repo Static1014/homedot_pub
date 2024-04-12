@@ -2,7 +2,5 @@
   "compilerOptions": {
     "baseUrl": "./"
   },
-  "exclude": [
-    "./out/**"
-  ]
+  "exclude": ["./out/**"]
 }
