@@ -71,7 +71,7 @@ $(function () {
       ],
       isEn: false,
       promotion: {
-        visible: true,
+        visible: false,
         content: [
           '数字华容道，免费挑战！快来试试吧！',
           '24.3.25-24.3.31，<a href="data/promotion.html" target="_blank">100个免费促销兑换码</a>，先到先得！',
