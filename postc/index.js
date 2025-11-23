@@ -15,22 +15,22 @@ $(function () {
       version: 'v2.0.0',
       hideStore: false,
       storeList: [
-        {
-          visible: true,
-          name: '华为应用市场',
-          nameEn: 'Huawei AppGallery',
-          img: '../app_base/assets/img/store/huawei.png',
-          ok: true,
-          url: 'https://appgallery.huawei.com/app/C109424593'
-        },
-        {
-          visible: true,
-          name: '腾讯应用宝',
-          nameEn: 'Tencent App Gallery',
-          img: '../app_base/assets/img/store/yyb.svg',
-          ok: true,
-          url: 'https://sj.qq.com/appdetail/com.static4u.pic_maker'
-        },
+        // {
+        //   visible: true,
+        //   name: '华为应用市场',
+        //   nameEn: 'Huawei AppGallery',
+        //   img: '../app_base/assets/img/store/huawei.png',
+        //   ok: true,
+        //   url: 'https://appgallery.huawei.com/app/C109424593'
+        // },
+        // {
+        //   visible: true,
+        //   name: '腾讯应用宝',
+        //   nameEn: 'Tencent App Gallery',
+        //   img: '../app_base/assets/img/store/yyb.svg',
+        //   ok: true,
+        //   url: 'https://sj.qq.com/appdetail/com.static4u.pic_maker'
+        // },
         {
           visible: true, // 是否显示
           name: 'Google Play',
